@@ -1,7 +1,7 @@
 #!/bin/sh
 
 EXTENSION=$1
-DIRECTORY=$2
+DIRECTORY="$(2:-.)"
 
 WILDCARD_PATH="$DIRECTORY/*.$EXTENSION"
 COUNT=0
@@ -12,4 +12,4 @@ for file in $WILDCARD_PATH; do
   fi
  DONE 
 
- echo "Number of files with extensions. $EXTENSIONS in $DIRECTORY: $COUNT"
+ echo "Number of files with extensions names. $EXTENSIONS in $DIRECTORY: $COUNT"
